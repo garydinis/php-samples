@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myService-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myService-app
+  template:
+    containers:
+      - name: myService-container
+        image: imagename:imagetag
+        imagePullPolicy: IfNotPresent
+        ports:
+          - name: app-port
+            containerPort: 9000
+        env:
+          - name: ENV_NAME
+            value: "ENV_VALUE"
+  

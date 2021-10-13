@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myService
+spec:
+  selector:
+    app: myService-app
+  ports:
+    name: app-port
+    port: 9000

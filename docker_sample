@@ -1,0 +1,7 @@
+FROM "host/imagename:imagetag"
+
+WORKDIR /app
+
+COPY bin /app/bin 
+
+EXPOSE 9000;
